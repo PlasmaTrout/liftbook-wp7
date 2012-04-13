@@ -1,0 +1,34 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 11.00
+# Visual Studio 2010
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Liftbook", "LatchD.Liftbook\Liftbook.csproj", "{E628A5F2-5B38-4976-9606-5CE8207DFDC2}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LatchD.Liftbook.Library", "LatchD.Liftbook.Library\LatchD.Liftbook.Library.csproj", "{CED78481-B2E6-4588-BAB5-E1BA7E3EB8EB}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LatchD.Phone.Controls", "LatchD.Phone.Controls\LatchD.Phone.Controls.csproj", "{4E92F5A3-CBFE-45A0-83B7-DB4A22F6CD5A}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{E628A5F2-5B38-4976-9606-5CE8207DFDC2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E628A5F2-5B38-4976-9606-5CE8207DFDC2}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E628A5F2-5B38-4976-9606-5CE8207DFDC2}.Debug|Any CPU.Deploy.0 = Debug|Any CPU
+		{E628A5F2-5B38-4976-9606-5CE8207DFDC2}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E628A5F2-5B38-4976-9606-5CE8207DFDC2}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E628A5F2-5B38-4976-9606-5CE8207DFDC2}.Release|Any CPU.Deploy.0 = Release|Any CPU
+		{CED78481-B2E6-4588-BAB5-E1BA7E3EB8EB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CED78481-B2E6-4588-BAB5-E1BA7E3EB8EB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CED78481-B2E6-4588-BAB5-E1BA7E3EB8EB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CED78481-B2E6-4588-BAB5-E1BA7E3EB8EB}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4E92F5A3-CBFE-45A0-83B7-DB4A22F6CD5A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4E92F5A3-CBFE-45A0-83B7-DB4A22F6CD5A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4E92F5A3-CBFE-45A0-83B7-DB4A22F6CD5A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4E92F5A3-CBFE-45A0-83B7-DB4A22F6CD5A}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

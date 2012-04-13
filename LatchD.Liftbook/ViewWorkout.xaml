@@ -1,0 +1,69 @@
+﻿<phone:PhoneApplicationPage 
+    x:Class="WPLifts.ViewWorkout"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:phone="clr-namespace:Microsoft.Phone.Controls;assembly=Microsoft.Phone"
+    xmlns:shell="clr-namespace:Microsoft.Phone.Shell;assembly=Microsoft.Phone"
+    xmlns:tookit="clr-namespace:Microsoft.Phone.Controls;assembly=Microsoft.Phone.Controls.Toolkit"
+    xmlns:y="clr-namespace:Microsoft.Phone.Controls;assembly=Microsoft.Phone.Controls"
+    xmlns:z="clr-namespace:WPLifts.Controls"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    FontFamily="{StaticResource PhoneFontFamilyNormal}"
+    FontSize="{StaticResource PhoneFontSizeNormal}"
+    Foreground="{StaticResource PhoneForegroundBrush}"
+    SupportedOrientations="Portrait" Orientation="Portrait"
+    mc:Ignorable="d" d:DesignHeight="696" d:DesignWidth="480"
+    shell:SystemTray.IsVisible="True">
+
+    <!--LayoutRoot is the root grid where all page content is placed-->
+    <Grid x:Name="LayoutRoot" Background="Transparent">
+        <Grid.RowDefinitions>
+            <RowDefinition/>
+            <RowDefinition Height="50"/>
+        </Grid.RowDefinitions>
+
+        <y:Pivot Title="Liftbook" x:Name="MasterPivot" Margin="0,0,0,0">
+            <!--<y:Pivot.Background>
+                <ImageBrush ImageSource="Images/deadlift-bar-crowd.jpg" Opacity=".2" Stretch="UniformToFill"></ImageBrush>
+            </y:Pivot.Background>-->
+            <y:PivotItem Header="Mon Jan 1" x:Name="MasterPivotItem">
+                <!--<l:LazyListBox x:Name="ExerciseList" SelectionChanged="ExerciseList_SelectionChanged">
+                    
+                </l:LazyListBox>-->
+                <ListBox x:Name="ExerciseList" SelectionChanged="ExerciseList_SelectionChanged">
+                    
+                </ListBox>
+            </y:PivotItem>
+        </y:Pivot>
+        
+        
+      
+        <!--ContentPanel - place additional content here-->
+        <!--<StackPanel Orientation="Horizontal" Grid.Row="3" HorizontalAlignment="Center">
+            <TextBlock Style="{StaticResource PhoneTextTitle2Style}" VerticalAlignment="Center">Current Selection:&#160;</TextBlock>
+            <TextBlock x:Name="DateTextBlock" Style="{StaticResource PhoneTextTitle2Style}" VerticalAlignment="Center">3/17/2011</TextBlock>
+        </StackPanel>-->
+    </Grid>
+ 
+    <!--Sample code showing usage of ApplicationBar-->
+    <phone:PhoneApplicationPage.ApplicationBar>
+        <shell:ApplicationBar IsVisible="True" IsMenuEnabled="True">
+            <shell:ApplicationBarIconButton IconUri="/Images/appbarcalendar.png" Text="Home" x:Name="HomeWorkoutButton" Click="HomeWorkoutButton_Click_1"/>
+            <shell:ApplicationBarIconButton IconUri="/Images/appbarweights.png" Text="Weights" x:Name="AddWorkoutButton" Click="AddWorkoutButton_Click"/>
+            <shell:ApplicationBarIconButton IconUri="/Images/appbarjog.png" Text="Cardio" x:Name="AddJogButton" Click="AddJogButton_Click"/>
+            <shell:ApplicationBarIconButton IconUri="/Images/appbarshare.png" Text="Share" x:Name="ShareButton" Click="ShareButton_Click"/>
+            <!--<shell:ApplicationBarIconButton IconUri="/Images/appbar_button2.png" Text="Share Data" x:Name="ShareButton" Click="ShareButton_Click"/>-->
+            <shell:ApplicationBar.MenuItems>
+                <shell:ApplicationBarMenuItem Text="back to list" x:Name="HomeMenuItem" Click="HomeMenuItem_Click"/>
+                <shell:ApplicationBarMenuItem Text="rest 60 seconds" x:Name="Rest60" Click="Rest60MenuItem_Click"/>
+                <shell:ApplicationBarMenuItem Text="rest 120 seconds" x:Name="Rest120" Click="Rest60MenuItem_Click"/>
+                <shell:ApplicationBarMenuItem Text="rest 180 seconds" x:Name="Rest180" Click="Rest60MenuItem_Click"/>
+                <shell:ApplicationBarMenuItem Text="rest 240 seconds" x:Name="Rest240" Click="Rest60MenuItem_Click"/>
+                <shell:ApplicationBarMenuItem Text="rest 300 seconds" x:Name="Rest300" Click="Rest60MenuItem_Click"/>
+                <!--<shell:ApplicationBarMenuItem Text="MenuItem 2"/>-->
+            </shell:ApplicationBar.MenuItems>
+        </shell:ApplicationBar>
+    </phone:PhoneApplicationPage.ApplicationBar>
+
+</phone:PhoneApplicationPage>

@@ -1,0 +1,98 @@
+﻿<phone:PhoneApplicationPage 
+    x:Class="WPLifts.AddExercises"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:phone="clr-namespace:Microsoft.Phone.Controls;assembly=Microsoft.Phone"
+    xmlns:shell="clr-namespace:Microsoft.Phone.Shell;assembly=Microsoft.Phone"
+    xmlns:y="clr-namespace:Microsoft.Phone.Controls;assembly=Microsoft.Phone.Controls.Toolkit"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:z="clr-namespace:LatchD.Phone.Controls;assembly=LatchD.Phone.Controls"
+    FontFamily="{StaticResource PhoneFontFamilyNormal}"
+    FontSize="{StaticResource PhoneFontSizeNormal}"
+    Foreground="{StaticResource PhoneForegroundBrush}"
+    SupportedOrientations="Portrait" Orientation="Portrait"
+    mc:Ignorable="d" d:DesignHeight="696" d:DesignWidth="480"
+    shell:SystemTray.IsVisible="True">
+
+    <!--LayoutRoot is the root grid where all page content is placed-->
+    <ScrollViewer>
+        <Grid x:Name="LayoutRoot">
+            <Grid.Background>
+                <ImageBrush ImageSource="/Images/appbarweights.png" Opacity=".1"></ImageBrush>
+            </Grid.Background>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="40"></RowDefinition>
+            </Grid.RowDefinitions>
+
+            <!--TitlePanel contains the name of the application and page title-->
+            <StackPanel x:Name="TitlePanel" Grid.Row="0" Margin="5,5,0,5">
+                <!--<StackPanel.Background>
+                <ImageBrush ImageSource="Images/deadlift-bar-crowd.jpg" Opacity=".2" Stretch="UniformToFill"></ImageBrush>
+            </StackPanel.Background>-->
+                <TextBlock x:Name="ApplicationTitle" Text="Liftbook" Style="{StaticResource PhoneTextNormalStyle}" Margin="19,12,0,0"/>
+                <TextBlock x:Name="PageTitle" Text="Add Lift" Margin="16,-7,0,0" Style="{StaticResource PhoneTextTitle1Style}"/>
+            </StackPanel>
+
+            <!--ContentPanel - place additional content here-->
+            <Grid x:Name="ContentPanel" Grid.Row="1" Margin="12,0,12,0">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="40"></RowDefinition>
+                    <RowDefinition Height="80"></RowDefinition>
+                    <RowDefinition Height="80"></RowDefinition>
+                    <RowDefinition Height="40"></RowDefinition>
+                    <RowDefinition Height="80"></RowDefinition>
+                    <RowDefinition Height="40"></RowDefinition>
+                    <RowDefinition Height="80"></RowDefinition>
+                    <RowDefinition Height="40"></RowDefinition>
+                    <RowDefinition Height="80"></RowDefinition>
+                    <RowDefinition></RowDefinition>
+                </Grid.RowDefinitions>
+
+                <TextBlock Style="{StaticResource PhoneTextTitle2Style}">Select Lift:</TextBlock>
+
+                <y:ListPicker x:Name="LiftCombo" Grid.Row="1">
+
+                </y:ListPicker>
+                <!--<ComboBox Grid.Row="1" x:Name="LiftCombo" Foreground="Black"></ComboBox>-->
+
+
+                <StackPanel Orientation="Horizontal" Grid.Row="2">
+                    <RadioButton x:Name="RadioMain" Grid.Row="2" Content="Main" GroupName="Reason" IsChecked="True"></RadioButton>
+                    <RadioButton x:Name="RadioAssist" Grid.Row="2" Content="Assistance" GroupName="Reason"></RadioButton>
+                    <RadioButton x:Name="RadioWarmup" Grid.Row="2" Content="Warmup" GroupName="Reason"></RadioButton>
+                </StackPanel>
+
+                <TextBlock Grid.Row="3" Style="{StaticResource PhoneTextTitle2Style}" x:Name="SetsLabel">1 set</TextBlock>
+                <!--<Slider x:Name="SetsSlider" Grid.Row="4" Minimum="1" Maximum="10" Value="1" SmallChange="1" LargeChange="1" IsTabStop="False" ValueChanged="SetsSlider_ValueChanged"></Slider>-->
+                <z:LatchDNumericUpDown x:Name="SetsSlider" Grid.Row="4" Value="1" Increment="1" Minimum="1" Maximum="10" OnValueChanged="SetsSlider_OnValueChanged"></z:LatchDNumericUpDown>
+
+                <TextBlock Grid.Row="7" Style="{StaticResource PhoneTextTitle2Style}" x:Name="WeightLabel">135 lbs</TextBlock>
+                <!--<Slider x:Name="WeightSlider" Grid.Row="8" Minimum="5" Maximum="800" Value="135" SmallChange="5" LargeChange="45" ValueChanged="WeightSlider_ValueChanged"></Slider>-->
+                <z:LatchDNumericUpDown x:Name="WeightSlider" Grid.Row="8" Value="135" Increment="5" Minimum="5" OnValueChanged="WeightSlider_OnValueChanged"></z:LatchDNumericUpDown>
+                
+                <TextBlock Grid.Row="5" Style="{StaticResource PhoneTextTitle2Style}" x:Name="RepsLabel">10 reps</TextBlock>
+                <!--<Slider x:Name="RepsSlider" Grid.Row="6" Minimum="1" Maximum="50" Value="10" ValueChanged="RepsSlider_ValueChanged"></Slider>-->
+                <z:LatchDNumericUpDown x:Name="RepsSlider" Grid.Row="6" Value="10" Increment="1" OnValueChanged="RepsSlider_OnValueChanged" Minimum="1"></z:LatchDNumericUpDown>
+
+
+            </Grid>
+
+            <!--<StackPanel Orientation="Horizontal" Grid.Row="2">
+                <TextBlock Style="{StaticResource PhoneTextTitle2Style}" x:Name="SelectedDateBlock" Margin="10,0,0,0" VerticalAlignment="Center">0/0/0000</TextBlock>
+                <TextBlock Style="{StaticResource PhoneTextNormalStyle}" x:Name="SetsBlock" Grid.Row="2">Lift (1 Set @ 4 x 135 lbs)</TextBlock>
+            </StackPanel>-->
+
+        </Grid>
+    </ScrollViewer>
+    <!--Sample code showing usage of ApplicationBar-->
+    <phone:PhoneApplicationPage.ApplicationBar>
+        <shell:ApplicationBar IsVisible="True" IsMenuEnabled="True">
+            <shell:ApplicationBarIconButton IconUri="/Images/appbarsave.png" Text="Save" x:Name="Save2Button" Click="Save2Button_Click"/>
+
+        </shell:ApplicationBar>
+    </phone:PhoneApplicationPage.ApplicationBar>
+
+</phone:PhoneApplicationPage>

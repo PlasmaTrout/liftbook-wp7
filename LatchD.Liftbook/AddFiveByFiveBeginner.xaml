@@ -1,0 +1,69 @@
+﻿<phone:PhoneApplicationPage 
+    x:Class="WPLifts.AddFiveByFiveBeginner"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:phone="clr-namespace:Microsoft.Phone.Controls;assembly=Microsoft.Phone"
+    xmlns:shell="clr-namespace:Microsoft.Phone.Shell;assembly=Microsoft.Phone"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:y="clr-namespace:Microsoft.Phone.Controls;assembly=Microsoft.Phone.Controls.Toolkit"
+    xmlns:z="clr-namespace:LatchD.Phone.Controls;assembly=LatchD.Phone.Controls"
+    FontFamily="{StaticResource PhoneFontFamilyNormal}"
+    FontSize="{StaticResource PhoneFontSizeNormal}"
+    Foreground="{StaticResource PhoneForegroundBrush}"
+    SupportedOrientations="Portrait" Orientation="Portrait"
+    mc:Ignorable="d" d:DesignHeight="696" d:DesignWidth="480"
+    shell:SystemTray.IsVisible="True">
+
+    <!--LayoutRoot is the root grid where all page content is placed-->
+    <Grid x:Name="LayoutRoot" Background="Transparent">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+
+        <!--TitlePanel contains the name of the application and page title-->
+        <StackPanel x:Name="TitlePanel" Grid.Row="0" Margin="5,5,0,5">
+            <TextBlock x:Name="ApplicationTitle" Text="Liftbook" Style="{StaticResource PhoneTextNormalStyle}" Margin="19,12,0,0"/>
+            <TextBlock x:Name="PageTitle" Text="Add 5x5" Margin="16,-7,0,0" Style="{StaticResource PhoneTextTitle1Style}"/>
+        </StackPanel>
+
+        <!--ContentPanel - place additional content here-->
+        <Grid x:Name="ContentPanel" Grid.Row="1" Margin="12,0,12,0">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="80"></RowDefinition>
+                <RowDefinition Height="50"></RowDefinition>
+                <RowDefinition Height="80"></RowDefinition>
+                <RowDefinition Height="50"></RowDefinition>
+                <RowDefinition Height="80"></RowDefinition>
+                <RowDefinition Height="50"></RowDefinition>
+                <RowDefinition Height="80"></RowDefinition>
+                <RowDefinition></RowDefinition>
+            </Grid.RowDefinitions>
+            
+            <y:WrapPanel Grid.Row="0">
+                <RadioButton x:Name="WorkoutARadio" Content="Workout A" GroupName="Workout" IsChecked="True" Checked="WorkoutARadio_Checked"></RadioButton>
+                <RadioButton x:Name="WorkoutBRadio" Content="Workout B" GroupName="Workout" Checked="WorkoutBRadio_Checked"></RadioButton>
+            </y:WrapPanel>
+
+            <TextBlock Grid.Row="1" Style="{StaticResource PhoneTextTitle2Style}" x:Name="FirstLabel">Squat Weight (5x5):</TextBlock>
+            <z:LatchDNumericUpDown x:Name="FirstWeight" Minimum="5" Increment="5" Grid.Row="2" Value="135"></z:LatchDNumericUpDown>
+
+            <TextBlock Grid.Row="3" Style="{StaticResource PhoneTextTitle2Style}" x:Name="SecondLabel">Bench Press Weight (5x5):</TextBlock>
+            <z:LatchDNumericUpDown x:Name="SecondWeight" Minimum="5" Increment="5" Grid.Row="4" Value="135"></z:LatchDNumericUpDown>
+
+            <TextBlock Grid.Row="5" Style="{StaticResource PhoneTextTitle2Style}" x:Name="ThirdLabel">Barbell Row Weight (5x5):</TextBlock>
+            <z:LatchDNumericUpDown x:Name="ThirdWeight" Minimum="5" Increment="5" Grid.Row="6" Value="135"></z:LatchDNumericUpDown>
+            
+            <CheckBox x:Name="WarmupsCheckBox" Grid.Row="7" Content="Generate Warmups" IsChecked="True"></CheckBox>
+        </Grid>
+    </Grid>
+
+    <phone:PhoneApplicationPage.ApplicationBar>
+        <shell:ApplicationBar IsVisible="True" IsMenuEnabled="True">
+            <shell:ApplicationBarIconButton IconUri="/Images/appbarsave.png" Text="Save" x:Name="Save2Button" Click="Save2Button_Click"/>
+
+        </shell:ApplicationBar>
+    </phone:PhoneApplicationPage.ApplicationBar>
+
+</phone:PhoneApplicationPage>

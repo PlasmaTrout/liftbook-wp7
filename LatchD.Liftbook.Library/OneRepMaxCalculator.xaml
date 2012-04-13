@@ -1,0 +1,44 @@
+﻿<UserControl x:Class="WPLiftsLibrary.OneRepMaxCalculator"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:y="clr-namespace:LatchD.Phone.Controls;assembly=LatchD.Phone.Controls"
+    xmlns:z="clr-namespace:Microsoft.Phone.Controls;assembly=Microsoft.Phone.Controls.Toolkit"
+    mc:Ignorable="d"
+    FontFamily="{StaticResource PhoneFontFamilyNormal}"
+    FontSize="{StaticResource PhoneFontSizeNormal}"
+    Foreground="{StaticResource PhoneForegroundBrush}"
+    d:DesignHeight="480" d:DesignWidth="480">
+
+    <Grid x:Name="LayoutRoot" Background="{StaticResource PhoneChromeBrush}">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="50"></RowDefinition>
+            <RowDefinition Height="80"></RowDefinition>
+            <RowDefinition></RowDefinition>
+            <RowDefinition Height="50"></RowDefinition>
+            <RowDefinition></RowDefinition>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition></ColumnDefinition>
+            <ColumnDefinition></ColumnDefinition>
+        </Grid.ColumnDefinitions>
+
+        <TextBlock Grid.Row="0" Grid.Column="0" Style="{StaticResource PhoneTextTitle2Style}">Reps</TextBlock>
+        <TextBlock Grid.Row="0" Grid.Column="1" Style="{StaticResource PhoneTextTitle2Style}">Weight</TextBlock>
+        <TextBlock Grid.Row="3" Grid.Column="0" Style="{StaticResource PhoneTextTitle2Style}">Formula</TextBlock>
+
+        <TextBlock Grid.Row="2" Grid.ColumnSpan="2" VerticalAlignment="Center" HorizontalAlignment="Center" Style="{ StaticResource PhoneTextTitle1Style}" x:Name="ResultTextBlock"> 135.00 lbs</TextBlock>
+
+        <y:LatchDNumericUpDown Grid.Row="1" Grid.Column="0" Value="5" Increment="1"></y:LatchDNumericUpDown>
+        <y:LatchDNumericUpDown Grid.Row="1" Grid.Column="1" Value="5" Increment="5"></y:LatchDNumericUpDown>
+
+
+        <z:WrapPanel Grid.Row="4" Grid.ColumnSpan="2" HorizontalAlignment="Center">
+            <RadioButton Content="Epley" IsChecked="True"></RadioButton>
+            <RadioButton Content="Brzycki"></RadioButton>
+            <RadioButton Content="Lander"></RadioButton>
+        </z:WrapPanel>
+   
+    </Grid>
+</UserControl>

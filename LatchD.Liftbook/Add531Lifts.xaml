@@ -1,0 +1,122 @@
+﻿<phone:PhoneApplicationPage 
+    x:Class="WPLifts.Add531Lifts"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:phone="clr-namespace:Microsoft.Phone.Controls;assembly=Microsoft.Phone"
+    xmlns:shell="clr-namespace:Microsoft.Phone.Shell;assembly=Microsoft.Phone"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:y="clr-namespace:Microsoft.Phone.Controls;assembly=Microsoft.Phone.Controls.Toolkit"
+    xmlns:z="clr-namespace:LatchD.Phone.Controls;assembly=LatchD.Phone.Controls"
+    FontFamily="{StaticResource PhoneFontFamilyNormal}"
+    FontSize="{StaticResource PhoneFontSizeNormal}"
+    Foreground="{StaticResource PhoneForegroundBrush}"
+    SupportedOrientations="Portrait" Orientation="Portrait"
+    mc:Ignorable="d" d:DesignHeight="696" d:DesignWidth="480"
+    shell:SystemTray.IsVisible="True">
+
+    <!--LayoutRoot is the root grid where all page content is placed-->
+    <ScrollViewer>
+        <Grid x:Name="LayoutRoot">
+            <Grid.Background>
+                <ImageBrush ImageSource="/Images/appbarweights.png" Opacity=".1"></ImageBrush>
+            </Grid.Background>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="*"/>
+            </Grid.RowDefinitions>
+
+            <!--TitlePanel contains the name of the application and page title-->
+            <StackPanel x:Name="TitlePanel" Grid.Row="0" Margin="5,5,0,5">
+                <TextBlock x:Name="ApplicationTitle" Text="Liftbook" Style="{StaticResource PhoneTextNormalStyle}" Margin="19,12,0,0"/>
+                <TextBlock x:Name="PageTitle" Text="Add 5/3/1" Margin="16,-7,0,0" Style="{StaticResource PhoneTextTitle1Style}"/>
+            </StackPanel>
+
+            <!--ContentPanel - place additional content here-->
+            <Grid x:Name="ContentPanel" Grid.Row="1" Margin="12,0,12,0">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="40"></RowDefinition>
+                    <RowDefinition Height="80"></RowDefinition>
+                    <RowDefinition Height="50"></RowDefinition>
+                    <RowDefinition Height="80"></RowDefinition>
+                    <RowDefinition Height="50"></RowDefinition>
+                    <RowDefinition Height="80"></RowDefinition>
+                    <RowDefinition Height="50"></RowDefinition>
+                    <RowDefinition Height="80"></RowDefinition>
+                    <RowDefinition Height="40"></RowDefinition>
+                    <RowDefinition Height="80"></RowDefinition>
+                    <RowDefinition Height="40"></RowDefinition>
+                    <RowDefinition Height="80"></RowDefinition>
+                    <!--<RowDefinition Height="40"></RowDefinition>
+                    <RowDefinition Height="80"></RowDefinition>-->
+                    <RowDefinition></RowDefinition>
+                </Grid.RowDefinitions>
+                <TextBlock Grid.Row="0" Style="{StaticResource PhoneTextTitle2Style}">Main Lift</TextBlock>
+                <TextBlock Grid.Row="4" Style="{StaticResource PhoneTextTitle2Style}" x:Name="Assistance1">Assistance 1</TextBlock>
+                <TextBlock Grid.Row="6" Style="{StaticResource PhoneTextTitle2Style}" x:Name="Assistance1WeightLabel">Weight (135 lbs)</TextBlock>
+                <TextBlock Grid.Row="10" Style="{StaticResource PhoneTextTitle2Style}" x:Name="Assistance2WeightLabel">Weight (135 lbs)</TextBlock>
+                <TextBlock Grid.Row="8" Style="{StaticResource PhoneTextTitle2Style}" x:Name="Assistance2">Assistance 2</TextBlock>
+                <TextBlock Grid.Row="2" Style="{StaticResource PhoneTextTitle2Style}" x:Name="MaxWeightLabel">Max Weight (135 lbs)</TextBlock>
+                <!--<TextBlock Grid.Row="12" Style="{StaticResource PhoneTextTitle2Style}" x:Name="WeekLabel">Week 1</TextBlock>-->
+                <z:LatchDNumericUpDown x:Name="WeightControl" Grid.Row="3" Increment="5" Value="135" OnValueChanged="WeightControl_OnValueChanged"></z:LatchDNumericUpDown>
+                <!--<Slider x:Name="WeightSlider" Grid.Row="3" Minimum="5" Maximum="800" Value="135" SmallChange="5" LargeChange="45" ValueChanged="WeightSlider_ValueChanged"></Slider>-->
+                <!--<Slider x:Name="WeekSlider" Grid.Row="13" Value="1" SmallChange="1" LargeChange="1" Minimum="1" Maximum="4" ValueChanged="WeekSlider_ValueChanged"></Slider>-->
+                
+                <y:WrapPanel Grid.Row="12">
+                    <RadioButton x:Name="Week1Radio" Content="Week 1" GroupName="Week" IsChecked="True" Checked="Week1Radio_Checked"></RadioButton>
+                    <RadioButton x:Name="Week2Radio" Content="Week 2" GroupName="Week" Checked="Week1Radio_Checked"></RadioButton>
+                    <RadioButton x:Name="Week3Radio" Content="Week 3" GroupName="Week" Checked="Week1Radio_Checked"></RadioButton>
+                    <RadioButton x:Name="Week4Radio" Content="Week 4" GroupName="Week" Checked="Week1Radio_Checked"></RadioButton>
+                </y:WrapPanel>
+                
+                <z:LatchDNumericUpDown x:Name="Assistance1Control" Grid.Row="7" Increment="5" Value="135" OnValueChanged="Assistance1Control_OnValueChanged"></z:LatchDNumericUpDown>
+                <!--<Slider x:Name="Assistance1WeightSlider" Grid.Row="7" Minimum="5" Maximum="800" Value="135" SmallChange="5" LargeChange="45" ValueChanged="Assistance1WeightSlider_ValueChanged"></Slider>-->
+                <z:LatchDNumericUpDown x:Name="Assitance2Control" Grid.Row="11" Increment="5" Value="135" OnValueChanged="Assitance2Control_OnValueChanged"></z:LatchDNumericUpDown>
+                <!--<Slider x:Name="Assistance2WeightSlider" Grid.Row="11" Minimum="5" Maximum="800" Value="135" SmallChange="5" LargeChange="45" ValueChanged="Assistance2WeightSlider_ValueChanged"></Slider>-->
+                <y:ListPicker x:Name="MainListPicker" Grid.Row="1">
+                    <!--<y:ListPickerItem Content="Military Press"></y:ListPickerItem>
+                    <y:ListPickerItem Content="Deadlift"></y:ListPickerItem>
+                    <y:ListPickerItem Content="Bench Press"></y:ListPickerItem>
+                    <y:ListPickerItem Content="Back Squat"></y:ListPickerItem>-->
+                </y:ListPicker>
+                
+                <y:ListPicker x:Name="AssistancePicker1" Grid.Row="5">
+                    <!--<y:ListPickerItem Content="Military Press"></y:ListPickerItem>
+                    <y:ListPickerItem Content="Deadlift"></y:ListPickerItem>
+                    <y:ListPickerItem Content="Bench Press"></y:ListPickerItem>
+                    <y:ListPickerItem Content="Back Squat"></y:ListPickerItem>-->
+                </y:ListPicker>
+
+                <y:ListPicker x:Name="AssistancePicker2" Grid.Row="9">
+                    <!--<y:ListPickerItem Content="Military Press"></y:ListPickerItem>
+                    <y:ListPickerItem Content="Deadlift"></y:ListPickerItem>
+                    <y:ListPickerItem Content="Bench Press"></y:ListPickerItem>
+                    <y:ListPickerItem Content="Back Squat"></y:ListPickerItem>-->
+                </y:ListPicker>
+
+                <!--<TextBlock Grid.Row="14">This template generates the warmup sets for the main lift automatically.</TextBlock>-->
+            </Grid>
+            
+            
+        </Grid>
+    </ScrollViewer>
+
+    <!--Sample code showing usage of ApplicationBar-->
+    <!--<phone:PhoneApplicationPage.ApplicationBar>
+        <shell:ApplicationBar IsVisible="True" IsMenuEnabled="True">
+            <shell:ApplicationBarIconButton IconUri="/Images/appbar_button1.png" Text="Button 1"/>
+            <shell:ApplicationBarIconButton IconUri="/Images/appbar_button2.png" Text="Button 2"/>
+            <shell:ApplicationBar.MenuItems>
+                <shell:ApplicationBarMenuItem Text="MenuItem 1"/>
+                <shell:ApplicationBarMenuItem Text="MenuItem 2"/>
+            </shell:ApplicationBar.MenuItems>
+        </shell:ApplicationBar>
+    </phone:PhoneApplicationPage.ApplicationBar>-->
+    <phone:PhoneApplicationPage.ApplicationBar>
+        <shell:ApplicationBar IsVisible="True" IsMenuEnabled="True">
+            <shell:ApplicationBarIconButton IconUri="/Images/appbarsave.png" Text="Save" x:Name="Save2Button" Click="Save2Button_Click"/>
+
+        </shell:ApplicationBar>
+    </phone:PhoneApplicationPage.ApplicationBar>
+
+</phone:PhoneApplicationPage>

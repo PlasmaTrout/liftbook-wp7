@@ -1,0 +1,273 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>10.0.20506</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{E628A5F2-5B38-4976-9606-5CE8207DFDC2}</ProjectGuid>
+    <ProjectTypeGuids>{C089C8C0-30E0-4E22-80C0-CE093F111A43};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>WPLifts</RootNamespace>
+    <AssemblyName>LatchD.Liftbook</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <SilverlightVersion>$(TargetFrameworkVersion)</SilverlightVersion>
+    <TargetFrameworkProfile>WindowsPhone</TargetFrameworkProfile>
+    <TargetFrameworkIdentifier>Silverlight</TargetFrameworkIdentifier>
+    <SilverlightApplication>true</SilverlightApplication>
+    <SupportedCultures>
+    </SupportedCultures>
+    <XapOutputs>true</XapOutputs>
+    <GenerateSilverlightManifest>true</GenerateSilverlightManifest>
+    <XapFilename>Liftbook.xap</XapFilename>
+    <SilverlightManifestTemplate>Properties\AppManifest.xml</SilverlightManifestTemplate>
+    <SilverlightAppEntry>WPLifts.App</SilverlightAppEntry>
+    <ValidateXaml>true</ValidateXaml>
+    <ThrowErrorsInValidation>true</ThrowErrorsInValidation>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>Bin\Debug</OutputPath>
+    <DefineConstants>DEBUG;TRACE;SILVERLIGHT;WINDOWS_PHONE</DefineConstants>
+    <NoStdLib>true</NoStdLib>
+    <NoConfig>true</NoConfig>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>Bin\Release</OutputPath>
+    <DefineConstants>TRACE;SILVERLIGHT;WINDOWS_PHONE</DefineConstants>
+    <NoStdLib>true</NoStdLib>
+    <NoConfig>true</NoConfig>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <RunCodeAnalysis>true</RunCodeAnalysis>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.Phone" />
+    <Reference Include="Microsoft.Phone.Controls, Version=7.0.0.0, Culture=neutral, PublicKeyToken=24eec0d8c86cda1e, processorArchitecture=MSIL" />
+    <Reference Include="Microsoft.Phone.Controls.Toolkit, Version=1.0.0.0, Culture=neutral, PublicKeyToken=b772ad94eb9ca604" />
+    <Reference Include="Microsoft.Phone.Interop" />
+    <Reference Include="Microsoft.Xna.Framework" />
+    <Reference Include="Microsoft.Xna.Framework.Input.Touch" />
+    <Reference Include="System.Windows" />
+    <Reference Include="system" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Net" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Add531Lifts.xaml.cs">
+      <DependentUpon>Add531Lifts.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="AddCardio.xaml.cs">
+      <DependentUpon>AddCardio.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="AddExercises.xaml.cs">
+      <DependentUpon>AddExercises.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="AddFiveByFiveBeginner.xaml.cs">
+      <DependentUpon>AddFiveByFiveBeginner.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="AddNewSchedule.xaml.cs">
+      <DependentUpon>AddNewSchedule.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="AddOriginalStartingStrength.xaml.cs">
+      <DependentUpon>AddOriginalStartingStrength.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="App.xaml.cs">
+      <DependentUpon>App.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\CardioListControl.xaml.cs">
+      <DependentUpon>CardioListControl.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\ExerciseCardioControl.xaml.cs">
+      <DependentUpon>ExerciseCardioControl.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\ExerciseLiftControl.xaml.cs">
+      <DependentUpon>ExerciseLiftControl.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\ExerciseListControl.xaml.cs">
+      <DependentUpon>ExerciseListControl.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\ScheduledDateControl.xaml.cs">
+      <DependentUpon>ScheduledDateControl.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="GlobalSuppressions.cs" />
+    <Compile Include="MainPage.xaml.cs">
+      <DependentUpon>MainPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="OneRepMaxCalculator.xaml.cs">
+      <DependentUpon>OneRepMaxCalculator.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="RestTimer.xaml.cs">
+      <DependentUpon>RestTimer.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="ShareData.xaml.cs">
+      <DependentUpon>ShareData.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="UITextResources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>UITextResources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="ViewWorkout.xaml.cs">
+      <DependentUpon>ViewWorkout.xaml</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <ApplicationDefinition Include="App.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </ApplicationDefinition>
+    <Page Include="Add531Lifts.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="AddCardio.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="AddExercises.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="AddFiveByFiveBeginner.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="AddNewSchedule.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="AddOriginalStartingStrength.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Controls\CardioListControl.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Controls\ExerciseCardioControl.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Controls\ExerciseLiftControl.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Controls\ExerciseListControl.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Controls\ScheduledDateControl.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="MainPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="OneRepMaxCalculator.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="RestTimer.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="ShareData.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="ViewWorkout.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Properties\AppManifest.xml" />
+    <None Include="Properties\WMAppManifest.xml">
+      <SubType>Designer</SubType>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Background.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\appbar.add.rest.png" />
+    <Content Include="Images\appbar.minus.rest.png" />
+    <Content Include="Images\appbarback.png" />
+    <Resource Include="Images\cropped-barbell_banner.jpg" />
+    <Content Include="Images\appbarcalc.png" />
+    <Content Include="Images\appbarcalendar.png" />
+    <Content Include="Images\appbarjog2.png" />
+    <Content Include="Images\appbarwarmups.png" />
+    <Content Include="Images\appbarweights2.png" />
+    <Content Include="Sounds\buzzer_x.wav" />
+    <Content Include="Sounds\buzzer_x2.wav" />
+    <Content Include="wplifticon3transparent.png" />
+    <Content Include="wpliftstile.png" />
+    <Content Include="wpliftstile2.png" />
+    <Content Include="wpliftstile3transparent.png" />
+    <Resource Include="Images\appbarbasecircle.png" />
+    <Content Include="Images\appbarcheck.png" />
+    <Content Include="Images\appbarjog.png" />
+    <Content Include="Images\appbarruler.png" />
+    <Content Include="Images\appbarsave.png" />
+    <Content Include="Images\appbarweights.png" />
+    <Content Include="Images\appcalendar.png" />
+    <Content Include="wpliftstile.png" />
+    <Content Include="Toolkit.Content\ApplicationBar.Cancel.png" />
+    <Content Include="Toolkit.Content\ApplicationBar.Check.png" />
+    <Resource Include="Images\calendar.png" />
+    <Resource Include="Images\breakpoint.png" />
+    <Resource Include="Images\checks.png" />
+    <Resource Include="Images\deadlift-bar-crowd.jpg" />
+    <Resource Include="Images\add2.png" />
+    <Resource Include="Images\link.png" />
+    <Resource Include="Images\LatchdLogo2.png" />
+    <Resource Include="Images\LatchdLogo3.png" />
+    <Resource Include="Images\LatchdLogo3Icon.png" />
+    <Content Include="ApplicationIcon.png" />
+    <Content Include="Images\appbaradd.png" />
+    <Content Include="Images\appbarnew.png" />
+    <Content Include="Images\appbarnext.png" />
+    <Content Include="Images\appbarshare.png" />
+    <Content Include="SplashScreenImage.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\LatchD.Phone.Controls\LatchD.Phone.Controls.csproj">
+      <Project>{4E92F5A3-CBFE-45A0-83B7-DB4A22F6CD5A}</Project>
+      <Name>LatchD.Phone.Controls</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\LatchD.Liftbook.Library\LatchD.Liftbook.Library.csproj">
+      <Project>{CED78481-B2E6-4588-BAB5-E1BA7E3EB8EB}</Project>
+      <Name>LatchD.Liftbook.Library</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="UITextResources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>UITextResources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildExtensionsPath)\Microsoft\Silverlight for Phone\$(TargetFrameworkVersion)\Microsoft.Silverlight.$(TargetFrameworkProfile).Overrides.targets" />
+  <Import Project="$(MSBuildExtensionsPath)\Microsoft\Silverlight for Phone\$(TargetFrameworkVersion)\Microsoft.Silverlight.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+  <ProjectExtensions />
+</Project>
