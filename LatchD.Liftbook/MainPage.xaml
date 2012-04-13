@@ -27,9 +27,9 @@
 
         <!--TitlePanel contains the name of the application and page title-->
         <Border Grid.Row="0" Margin="5,5,5,5" CornerRadius="10,10,10,10">
-            <Border.Background>
+            <!--<Border.Background>
                 <ImageBrush ImageSource="Images/cropped-barbell_banner.jpg" Opacity=".2" Stretch="UniformToFill"></ImageBrush>
-            </Border.Background>
+            </Border.Background>-->
         <StackPanel x:Name="TitlePanel" >
             <TextBlock x:Name="ApplicationTitle" Text="Liftbook" Style="{StaticResource PhoneTextNormalStyle}" Margin="19,12,0,0"/>
             <TextBlock x:Name="PageTitle" Text="My Workouts" Margin="16,-7,0,0" Style="{StaticResource PhoneTextTitle1Style}"/>

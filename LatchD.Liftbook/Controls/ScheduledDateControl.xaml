@@ -8,13 +8,13 @@
     FontFamily="{StaticResource PhoneFontFamilyNormal}"
     FontSize="{StaticResource PhoneFontSizeNormal}"
     Foreground="{StaticResource PhoneForegroundBrush}"
-    d:DesignHeight="200" d:DesignWidth="480">
+    d:DesignHeight="150" d:DesignWidth="480">
 
     <Border CornerRadius="10,10,10,10" Background="{StaticResource PhoneChromeBrush}">
         <Grid x:Name="LayoutRoot">
-            <Grid.Background>
+            <!--<Grid.Background>
                 <ImageBrush ImageSource="/Images/appcalendar.png" Stretch="Uniform" Opacity=".2"></ImageBrush>
-            </Grid.Background>
+            </Grid.Background>-->
             <Grid.ColumnDefinitions>
                 <ColumnDefinition Width="80"></ColumnDefinition>
                 <ColumnDefinition></ColumnDefinition>
