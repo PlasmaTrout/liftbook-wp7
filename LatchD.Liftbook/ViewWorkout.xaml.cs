@@ -66,7 +66,9 @@ namespace WPLifts
 
                 ExerciseListControl control = new ExerciseListControl(file.Lifts.GetScheduledLifts(date, group),file.Lifts.GetBestOneRepEver(group));
 
-                control.WorkoutTextBlock.Text = group + " X " + control.Lifts.Count().ToString(CultureInfo.CurrentCulture);
+                int liftsCount = control.Lifts.Count();
+                control.WorkoutTextBlock.Text = group;// +" X " + control.Lifts.Count().ToString(CultureInfo.CurrentCulture);
+                control.SetLabel.Text = string.Format("{0} {1}",liftsCount.ToString(),liftsCount == 1 ? "Set" : "Sets");
                 control.Key = group;
                 control.Width = 440.00;
                 control.Height = 200.00;

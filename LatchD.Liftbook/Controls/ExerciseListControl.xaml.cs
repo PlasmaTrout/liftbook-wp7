@@ -71,7 +71,7 @@ namespace WPLifts.Controls
                 this.runs.Add(item);
             }
 
-            LogoImageBrush.ImageSource = new BitmapImage(new Uri("/Images/appbarjog2.png", UriKind.RelativeOrAbsolute));
+            //LogoImageBrush.ImageSource = new BitmapImage(new Uri("/Images/appbarjog2.png", UriKind.RelativeOrAbsolute));
             
             BindRunDetails();
         }

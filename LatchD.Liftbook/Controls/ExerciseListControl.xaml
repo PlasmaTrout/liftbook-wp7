@@ -25,25 +25,25 @@
             </Grid.ColumnDefinitions>
             <Grid.RowDefinitions>
                 <RowDefinition Height="0"></RowDefinition>
-                <RowDefinition></RowDefinition>
-                <RowDefinition Height="30"></RowDefinition>
+                <RowDefinition Height="40"></RowDefinition>
+                <RowDefinition Height="1"></RowDefinition>
                 <RowDefinition></RowDefinition>
                 <RowDefinition Height="32"></RowDefinition>
             </Grid.RowDefinitions>
 
             <Border Grid.Column="0" Margin="0,0,0,0" CornerRadius="10,0,0,0" BorderBrush="{StaticResource PhoneBorderBrush}" BorderThickness="0,0,0,0" Grid.ColumnSpan="3" Grid.RowSpan="5">
                 
-                        <Border.Background>
+                        <!--<Border.Background>
                             <ImageBrush x:Name="LogoImageBrush" ImageSource="/Images/appbarweights2.png" Stretch="Uniform" Opacity=".3"></ImageBrush>
-                        </Border.Background>
+                        </Border.Background>-->
                
-                        <TextBlock Style="{StaticResource PhoneTextTitle2Style}" VerticalAlignment="Top" x:Name="WorkoutTextBlock" TextWrapping="Wrap" HorizontalAlignment="Left">Workout</TextBlock>
+                        <TextBlock Style="{StaticResource PhoneTextTitle2Style}" VerticalAlignment="Top" x:Name="WorkoutTextBlock" TextWrapping="Wrap" HorizontalAlignment="Left">Dumbell Concentration Curls</TextBlock>
                    
                 
             </Border>
 
 
-
+            <TextBlock x:Name="SetLabel" Foreground="{StaticResource PhoneForegroundBrush}" Grid.Row="3" Grid.ColumnSpan="2" Style="{StaticResource PhoneTextTitle2Style}" VerticalAlignment="Center">0 Sets</TextBlock>
             <CheckBox Grid.Column="1" Grid.Row="3" Grid.RowSpan="1" Grid.ColumnSpan="2" VerticalAlignment="Center" IsEnabled="False" Content="Done" HorizontalAlignment="Right" x:Name="CompletedCheckBox" Margin="0,0,10,0"></CheckBox>
 
             <Border Grid.Row="4" Grid.Column="0" Grid.ColumnSpan="3" Margin="0,0,0,0" CornerRadius="0,0,10,10" Background="{StaticResource PhoneAccentBrush}" BorderBrush="{StaticResource PhoneBorderBrush}" BorderThickness="0,0,0,0">
