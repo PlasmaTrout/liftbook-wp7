@@ -1,0 +1,7 @@
+C:\Users\JEFFSMAC\Projects\liftbook-wp7\v12\Liftbook\LatchD.Phone.Controls\Bin\Debug\LatchD.Phone.Controls.dll
+C:\Users\JEFFSMAC\Projects\liftbook-wp7\v12\Liftbook\LatchD.Phone.Controls\Bin\Debug\LatchD.Phone.Controls.pdb
+C:\Users\JEFFSMAC\Projects\liftbook-wp7\v12\Liftbook\LatchD.Phone.Controls\obj\Debug\ResolveAssemblyReference.cache
+C:\Users\JEFFSMAC\Projects\liftbook-wp7\v12\Liftbook\LatchD.Phone.Controls\obj\Debug\LatchDNumericUpDown.g.i.cs
+C:\Users\JEFFSMAC\Projects\liftbook-wp7\v12\Liftbook\LatchD.Phone.Controls\obj\Debug\LatchD.Phone.Controls.g.resources
+C:\Users\JEFFSMAC\Projects\liftbook-wp7\v12\Liftbook\LatchD.Phone.Controls\obj\Debug\LatchD.Phone.Controls.dll
+C:\Users\JEFFSMAC\Projects\liftbook-wp7\v12\Liftbook\LatchD.Phone.Controls\obj\Debug\LatchD.Phone.Controls.pdb
