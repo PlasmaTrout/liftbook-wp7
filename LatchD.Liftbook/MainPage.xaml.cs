@@ -22,6 +22,7 @@ namespace WPLifts
     {
         private WpLiftsDataFile file;
         private int currentRange = 7;
+        private bool isMonthView = false;
 
         #region Constructor
 
@@ -38,8 +39,18 @@ namespace WPLifts
         {
           
                 ContentPanel.Items.Clear();
+                IEnumerable<string> coll = null;
 
-                foreach (var date in file.GetScheduledDates(currentRange))
+                if (isMonthView)
+                {
+                    coll = file.GetThisMonth();
+                }
+                else
+                {
+                    coll = file.GetScheduledDates(currentRange);
+                }
+
+                foreach (var date in coll)
                 {
                     ScheduledDateControl control = new ScheduledDateControl();
                     control.Width = 460.00;
@@ -173,6 +184,7 @@ namespace WPLifts
 
         private void AllDaysSelect_Click(object sender, EventArgs e)
         {
+            this.isMonthView = false;
             this.currentRange = 365;
             RangeLabel.Text = "Range: Full Year (182 Prior + Today + 182 Future)";
             BindSchedule(file);
@@ -180,8 +192,16 @@ namespace WPLifts
 
         private void SevenDaySelect_Click(object sender, EventArgs e)
         {
+            this.isMonthView = false;
             this.currentRange = 7;
             RangeLabel.Text = "Range: 7 Days (3 Prior + Today + 3 Future)";
+            BindSchedule(file);
+        }
+
+        private void MonthSelect_Click(object sender, EventArgs e)
+        {
+            this.isMonthView = true;
+            RangeLabel.Text = "Range: This Month";
             BindSchedule(file);
         }
 
@@ -197,6 +217,8 @@ namespace WPLifts
         {
             ScrollToday();
         }
+
+        
 
         
 

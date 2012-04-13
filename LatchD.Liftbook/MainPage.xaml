@@ -81,6 +81,7 @@
                 <shell:ApplicationBarMenuItem Text="Select Today" x:Name="TodaySelect" Click="TodaySelect_Click"/>
                 <shell:ApplicationBarMenuItem Text="Scroll To Today" x:Name="TodayScroll" Click="TodayScroll_Click"></shell:ApplicationBarMenuItem>
                 <shell:ApplicationBarMenuItem Text="7 Day Range" x:Name="SevenDaySelect" Click="SevenDaySelect_Click" />
+                <shell:ApplicationBarMenuItem Text="This Month" x:Name="MonthSelect" Click="MonthSelect_Click" />
                 <shell:ApplicationBarMenuItem Text="Full Year" x:Name="AllDaysSelect" Click="AllDaysSelect_Click"/>
             </shell:ApplicationBar.MenuItems>
         </shell:ApplicationBar>

@@ -191,6 +191,27 @@ namespace WPLiftsLibrary
             
         }
 
+        public IEnumerable<string> GetThisMonth()
+        {
+            int daysPast = DateTime.Now.Day-1;
+            DateTime previousDate = DateTime.Now.AddDays(0 - daysPast);
+            DateTime futureDate = DateTime.Now;
+
+            List<DateTime> lifts = new List<DateTime>(this.Lifts.GetScheduledDates(previousDate, futureDate));
+            List<DateTime> runs = new List<DateTime>(this.CardioRuns.GetScheduledDates(previousDate, futureDate));
+
+            lifts.AddRange(runs);
+
+            var results = from x in lifts
+                          orderby x
+                          select x.ToShortDateString();
+
+            foreach (var result in results.Distinct())
+            {
+                yield return result;
+            }
+        }
+
         public void DeleteItem(string id)
         {
             this.Lifts.DeleteItem(id);
