@@ -75,7 +75,7 @@
             <shell:ApplicationBarIconButton IconUri="/Images/appbarweights.png" Text="Weight" x:Name="AddWorkoutButton" Click="AddWorkoutButton_Click"/>
             <shell:ApplicationBarIconButton IconUri="/Images/appbarjog.png" Text="Cardio" x:Name="AddJogButton" Click="AddJogButton_Click"/>
             <shell:ApplicationBarIconButton IconUri="/Images/appbarcalc.png" Text="Calculator" x:Name="Calc" Click="Calc_Click"></shell:ApplicationBarIconButton>
-            <shell:ApplicationBarIconButton IconUri="/Images/appbarruler.png" Text="Measurement" x:Name="AddMeasurement" IsEnabled="False"></shell:ApplicationBarIconButton>
+            <!--<shell:ApplicationBarIconButton IconUri="/Images/appbarruler.png" Text="Measurement" x:Name="AddMeasurement" IsEnabled="False"></shell:ApplicationBarIconButton>-->
             <!--<shell:ApplicationBarIconButton IconUri="/Images/appbarshare.png" Text="Share" x:Name="ShareButton" Click="ShareButton_Click"/>-->
             <shell:ApplicationBar.MenuItems>
                 <shell:ApplicationBarMenuItem Text="Select Today" x:Name="TodaySelect" Click="TodaySelect_Click"/>
