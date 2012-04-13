@@ -17,9 +17,9 @@
             </y:ContextMenu>
         </y:ContextMenuService.ContextMenu>-->
     <Grid x:Name="LayoutRoot">
-            <Grid.Background>
+            <!--Grid.Background>
                 <ImageBrush ImageSource="/Images/appbarweights2.png" Opacity=".3" Stretch="Uniform" x:Name="GridImageBrush"></ImageBrush>
-            </Grid.Background>
+            </Grid.Background>-->
             <Grid.RowDefinitions>
                 <RowDefinition Height="0"></RowDefinition>
                 <RowDefinition></RowDefinition>

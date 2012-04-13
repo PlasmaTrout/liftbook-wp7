@@ -68,7 +68,14 @@ namespace WPLifts
 
                 int liftsCount = control.Lifts.Count();
                 control.WorkoutTextBlock.Text = group;// +" X " + control.Lifts.Count().ToString(CultureInfo.CurrentCulture);
-                control.SetLabel.Text = string.Format("{0} {1}",liftsCount.ToString(),liftsCount == 1 ? "Set" : "Sets");
+                if (liftsCount > 0)
+                {
+                    control.SetLabel.Text = string.Format("{0} {1}", liftsCount.ToString(), liftsCount == 1 ? "Set" : "Sets");
+                }
+                else
+                {
+                    control.SetLabel.Text = "";
+                }
                 control.Key = group;
                 control.Width = 440.00;
                 control.Height = 200.00;
@@ -95,7 +102,20 @@ namespace WPLifts
 
             foreach (var rungroup in runs)
             {
+
                 ExerciseListControl control = new ExerciseListControl(file.CardioRuns.GetScheduledCardio(date, rungroup));
+
+                int cardioCount = control.CardioRuns.Count();
+
+                if (cardioCount > 0)
+                {
+                    control.SetLabel.Text = string.Format("{0} {1}", cardioCount.ToString(), cardioCount == 1 ? "Session" : "Sessions");
+                }
+                else
+                {
+                    control.SetLabel.Text = "";
+                }
+
                 control.Key = rungroup;
                 control.WorkoutTextBlock.Text = rungroup;
                 control.Width = 440.00;
@@ -103,7 +123,7 @@ namespace WPLifts
                 control.Margin = new Thickness(5.0, 5.0, 5.0, 5.0);
                 control.CompletedCheckBox.IsChecked = file.CardioRuns.CheckForCompletion(date, rungroup);
                 control.ItemDeleted += new ExerciseListControl.ItemDeletedHandler(control_ItemDeleted);
-
+                
                 ExerciseList.Items.Add(control);
 
                 PivotItem item = SetupRunPivotItem(rungroup, date);
